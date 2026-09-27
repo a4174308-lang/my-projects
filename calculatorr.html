@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator - Aniket Sharma</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f7fb;
+            padding-top: 50px;
+        }
+
+        .calculator {
+            background-color: white;
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        input {
+            width: 85%;
+            padding: 12px;
+            margin: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 6px;
+            background-color: #1d4ed8;
+            color: white;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <h1>My Calculator</h1>
+
+        <input type="number" id="a" placeholder="Enter first number">
+        <input type="number" id="b" placeholder="Enter second number">
+        <input type="number" id="c" placeholder="Enter third number">
+
+        <button onclick="add()">Add</button>
+
+        <br>
+
+        <input type="number" id="p" placeholder="Enter first number">
+        <input type="number" id="q" placeholder="Enter second number">
+
+        <button onclick="subtract()">Subtract</button>
+
+        <br>
+
+        <input type="number" id="n" placeholder="Enter first number">
+        <input type="number" id="m" placeholder="Enter second number">
+
+        <button onclick="multiply()">Multiply</button>
+
+        <br>
+
+        <input type="number" id="e" placeholder="Enter first number">
+        <input type="number" id="f" placeholder="Enter second number">
+
+        <button onclick="divide()">Divide</button>
+
+        <h2 id="result">Result:</h2>
+
+    </div>
+
+    <script>
+
+        function add() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let c = Number(document.getElementById("c").value);
+
+            let sum = a + b + c;
+
+            document.getElementById("result").innerText = "sum=" + sum;
+        }
+
+        function subtract() {
+            let p = Number(document.getElementById("p").value);
+            let q = Number(document.getElementById("q").value);
+
+            let sub = p - q;
+
+            document.getElementById("result").innerText = "Sub=" + sub;
+        }
+
+        function multiply() {
+            let n = Number(document.getElementById("n").value);
+            let m = Number(document.getElementById("m").value);
+
+            let mul = n * m;
+
+            document.getElementById("result").innerText = "Mul=" + mul;
+        }
+
+        function divide() {
+            let e = Number(document.getElementById("e").value);
+            let f = Number(document.getElementById("f").value);
+
+            let div = e / f;
+
+            document.getElementById("result").innerText = "Div=" + div;
+        }
+
+    </script>
+
+</body>
+
+</html>
